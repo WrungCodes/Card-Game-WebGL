@@ -12,10 +12,10 @@ if (process.env.NODE_ENV === 'development') {
     corsUrl = process.env.DEPLOY_URL // https://naijawhot.herokuapp.com/api/v1
 }
 
-server.use(cors());
-// server.use(cors({
-//     origin: corsUrl
-// }))
+// server.use(cors());
+server.use(cors({
+    origin: corsUrl
+}))
 
 server.use(express.static('public'))
 
